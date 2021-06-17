@@ -76,6 +76,14 @@
                </div>
 
            </div>
+           
+           <div class="text-right">
+
+               @if(Auth::check())
+                    {{ Auth::user()->name }}
+               @endif
+
+           </div>
 
       @endsection    
     </body>
