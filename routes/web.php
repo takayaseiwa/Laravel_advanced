@@ -10,9 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'UsersController@index'); //書き換え
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // ユーザ登録
+Route::get('/', 'UsersController@index'); //書き換え
+
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup');
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
 

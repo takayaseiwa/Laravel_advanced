@@ -13,16 +13,16 @@ class MoviesController extends Controller
     {
         $user = \Auth::user();
         $movies = $user->movies()->orderBy('id', 'desc')->paginate(9);
-        
+
         $data=[
             'user' => $user,
             'movies' => $movies,
         ];
-        
+
         return view('movies.create', $data);
     }
-    
-     public function store(Request $request)
+
+    public function store(Request $request)
     {
 
         $this->validate($request,[
@@ -37,7 +37,7 @@ class MoviesController extends Controller
 
         return back();
     }
-    
+
     public function destroy($id)
     {
         $movie = Movie::find($id);

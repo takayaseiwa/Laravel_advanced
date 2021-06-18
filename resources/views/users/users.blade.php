@@ -24,6 +24,8 @@
 
                     ＠{!! link_to_route('users.show',$user->name,['id'=>$user->id]) !!}
                        <!--↑追記-->
+                    
+                    ＠{{ $user->name }}
 
                     <div>
                         @if($movie)
