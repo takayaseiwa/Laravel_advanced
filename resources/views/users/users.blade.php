@@ -40,6 +40,8 @@
                             {{ $movie->comment }}
                         @endif
                     </p>
+                    
+                        @include('follow.follow_button',['user'=>$user])
 
                 </div>
                 
