@@ -25,8 +25,6 @@
                     ＠{!! link_to_route('users.show',$user->name,['id'=>$user->id]) !!}
                        <!--↑追記-->
                     
-                    ＠{{ $user->name }}
-
                     <div>
                         @if($movie)
                             <iframe width="290" height="163.125" src="{{ 'https://www.youtube.com/embed/'.$movie->url }}?controls=1&loop=1&playlist={{ $movie->url }}" frameborder="0"></iframe>
